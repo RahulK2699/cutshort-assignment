@@ -5,10 +5,12 @@ import Header from "../Components/Header";
 import Instruction from "../Components/Instruction";
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Screen2 = () => {
   const [params, setParams] = useState({ workspaceName: "", workspaceURL: "" });
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     e.preventDefault();
     let { name, value } = e.target;
@@ -31,9 +33,14 @@ const Screen2 = () => {
         name2={"workspaceURL"}
         optional={"(optional)"}
       />
-      <Link to={"/screen3"}>
-        <Button>Create Workspace</Button>
-      </Link>
+
+      <Button
+        className={" cursor-pointer"}
+        isDisabled={!params.workspaceName}
+        onClick={() => navigate("/screen3")}
+      >
+        Create Workspace
+      </Button>
     </div>
   );
 };

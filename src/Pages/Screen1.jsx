@@ -5,10 +5,12 @@ import Header from "../Components/Header";
 import Instruction from "../Components/Instruction";
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Screen1 = () => {
   const [params, setParams] = useState({ firstName: "", displayName: "" });
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     e.preventDefault();
     let { name, value } = e.target;
@@ -30,9 +32,14 @@ const Screen1 = () => {
         name1={"firstName"}
         name2={"displayName"}
       />
-      <Link to={"/screen2"}>
-        <Button>Create Workspace</Button>
-      </Link>
+
+      <Button
+        className={" cursor-pointer"}
+        isDisabled={!params.firstName && !params.displayName}
+        onClick={() => navigate("/screen2")}
+      >
+        Create Workspace
+      </Button>
     </div>
   );
 };
