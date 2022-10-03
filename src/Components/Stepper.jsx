@@ -3,7 +3,7 @@ import React from "react";
 const Stepper = ({ count }) => {
   const arr = [1, 2, 3, 4];
   return (
-    <div className=" flex">
+    <div className=" flex mb-10">
       {arr.map((e, index) => (
         <div key={index + 1} className="flex items-center">
           <p

@@ -21,25 +21,25 @@ const Screen3 = () => {
         heading={"How are you planning to use Eden ?"}
         subheading={"We'll streamline your setup experience accordingly"}
       />
-      <div className=" flex gap-7 w-[400px]">
+      <div className=" flex flex-col md:flex-row gap-2 mx-3 md:gap-7 w-[400px]">
         <Frame
-          className={selected.frame1 ? "border border-red-500" : ""}
+          className={selected.frame1 ? "border border-[#684ce4]" : ""}
           logo={
             <PersonIcon className={selected.frame1 ? " text-violet-500" : ""} />
           }
-          text={"for myself"}
+          text={"For myself"}
           longText={"Write better, Think more clearly. Stay organized"}
           onClick={() =>
             setSelected({ ...selected, frame1: true, frame2: false })
           }
         />
         <Frame
-          className={selected.frame2 ? "border border-violet-500" : ""}
+          className={selected.frame2 ? "border border-[#684ce4]" : ""}
           logo={
             <GroupsIcon className={selected.frame2 ? " text-violet-500" : ""} />
           }
           text={"With my team"}
-          longText={" Write docs, tasks and projects all in one place"}
+          longText={" Wikis, docs, tasks & projects, all in one place"}
           onClick={() =>
             setSelected({ ...selected, frame2: true, frame1: false })
           }
