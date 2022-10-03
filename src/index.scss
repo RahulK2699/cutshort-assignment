@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// css for pages
+
+.div-wrapper{
+    @apply flex flex-col gap-4 items-center justify-center w-fit m-auto
+}
+
+.frame-div-wrapper{
+    @apply flex flex-col md:flex-row gap-2 mx-3 md:gap-7 w-[400px]
+}
+
+.check-outer-div{
+    @apply relative bg-violet-500 w-16 h-16 rounded-[32px] my-7
+}
+
+.check-inner-div{
+    @apply  absolute bottom-5 left-5
+}
+
+//css for components
+.btn{
+    @apply w-1/2 md:w-[380px]  text-center p-3 rounded-md bg-violet-500 text-sm text-gray-300 font-medium  mt-5
+}
+
+//Form
+
+.form-wrapper{
+    @apply w-[380px] flex flex-col gap-5 px-5 md:px-0
+}
+
+.form-label{
+    @apply block mb-2 font-medium text-sm text-gray-600
+}
+
+.form-input{
+    @apply outline-none border border-gray-200 p-2 rounded-md text-gray-400 
+    font-normal w-full pl-4
+}
+
+.form-error{
+    @apply text-red-500 absolute text-[10px]
+}
+
+//stepper
+
+.stepper-p{
+    @apply w-8 h-[2px] bg-gray-400
+}
+
+.stepper-div{
+    @apply w-9 h-9 rounded-[18px] border border-gray-400 text-xs relative
+}

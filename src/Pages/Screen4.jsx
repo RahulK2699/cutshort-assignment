@@ -7,11 +7,11 @@ import Stepper from "../Components/Stepper";
 
 const Screen4 = () => {
   return (
-    <div className="flex flex-col gap-4 items-center justify-center w-fit m-auto">
+    <div className="div-wrapper">
       <Header />
       <Stepper count={4} />
-      <div className=" relative bg-violet-500 w-16 h-16 rounded-[32px] mb-7">
-        <div className=" absolute bottom-5 left-5">
+      <div className="check-outer-div">
+        <div className="check-inner-div">
           <CheckIcon className=" text-white" />
         </div>
       </div>

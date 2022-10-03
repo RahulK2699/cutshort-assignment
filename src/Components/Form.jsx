@@ -13,36 +13,32 @@ const Form = ({
   error2,
 }) => {
   return (
-    <form className=" w-[380px] flex flex-col gap-5 px-5 md:px-0">
+    <form className=" form-wrapper">
       <div className="relative">
-        <label className=" block mb-2 font-medium text-sm text-gray-600">
-          {label1}
-        </label>
+        <label className=" form-label">{label1}</label>
         <input
-          className=" outline-none border border-gray-200 p-2 rounded-md text-gray-400 
-                 font-normal w-full pl-4"
+          className=" form-input"
           type="text"
           name={name1}
           value={value1}
           onChange={onChange}
         />
-        <p className=" text-red-500 absolute text-[10px] ">{error1}</p>
+        <p className=" form-error ">{error1}</p>
       </div>
 
       <div>
-        <label className=" block mb-2 font-medium text-sm text-gray-600">
+        <label className=" form-label">
           {label2}{" "}
           <span className=" text-gray-600 text-opacity-40">{optional}</span>
         </label>
         <input
-          className=" outline-none border border-gray-200 p-2 rounded-md text-gray-400 
-                font-normal w-full pl-4"
+          className="form-input"
           type="text"
           value={value2}
           onChange={onChange}
           name={name2}
         />
-        <p className="  text-red-500 absolute text-[10px] ">{error2}</p>
+        <p className="  form-error ">{error2}</p>
       </div>
     </form>
   );

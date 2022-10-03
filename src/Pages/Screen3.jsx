@@ -14,14 +14,14 @@ const Screen3 = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col gap-4 items-center justify-center w-fit m-auto">
+    <div className="div-wrapper">
       <Header />
       <Stepper count={3} />
       <Instruction
         heading={"How are you planning to use Eden ?"}
         subheading={"We'll streamline your setup experience accordingly"}
       />
-      <div className=" flex flex-col md:flex-row gap-2 mx-3 md:gap-7 w-[400px]">
+      <div className=" frame-div-wrapper">
         <Frame
           className={selected.frame1 ? "border border-[#684ce4]" : ""}
           logo={

@@ -31,7 +31,7 @@ const Screen2 = () => {
     else navigate("/screen3");
   };
   return (
-    <div className="flex flex-col gap-4 items-center justify-center w-fit m-auto">
+    <div className="div-wrapper">
       <Header />
       <Stepper count={2} />
       <Instruction
