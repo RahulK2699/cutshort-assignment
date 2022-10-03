@@ -7,6 +7,7 @@ import Instruction from "../Components/Instruction";
 import Frame from "../Components/Screen3/Frame";
 import PersonIcon from "@mui/icons-material/Person";
 import GroupsIcon from "@mui/icons-material/Groups";
+import Stepper from "../Components/Stepper";
 const Screen3 = () => {
   const [selected, setSelected] = useState({ frame1: false, frame2: false });
 
@@ -15,13 +16,14 @@ const Screen3 = () => {
   return (
     <div className="flex flex-col gap-4 items-center justify-center w-fit m-auto">
       <Header />
+      <Stepper count={3} />
       <Instruction
         heading={"How are you planning to use Eden ?"}
         subheading={"We'll streamline your setup experience accordingly"}
       />
       <div className=" flex gap-7 w-[400px]">
         <Frame
-          className={selected.frame1 ? "border border-violet-500" : ""}
+          className={selected.frame1 ? "border border-red-500" : ""}
           logo={
             <PersonIcon className={selected.frame1 ? " text-violet-500" : ""} />
           }
