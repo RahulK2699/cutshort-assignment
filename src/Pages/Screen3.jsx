@@ -23,7 +23,7 @@ const Screen3 = () => {
         heading={"How are you planning to use Eden ?"}
         subheading={"We'll streamline your setup experience accordingly"}
       />
-      <div className=" frame-div-wrapper">
+      <div className=" frame-div-wrapper w-[400px]">
         <Frame
           className={selected.frame1 ? "border border-[#684ce4]" : ""}
           logo={

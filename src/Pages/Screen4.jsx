@@ -10,7 +10,7 @@ const Screen4 = () => {
     <div className="div-wrapper">
       <Header />
       <Stepper count={4} />
-      <div className="check-outer-div">
+      <div className="check-outer-div rounded-[32px]">
         <div className="check-inner-div">
           <CheckIcon className=" text-white" />
         </div>

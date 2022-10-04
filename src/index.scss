@@ -6,7 +6,17 @@
 
 // css for pages
 
+.div-wrapper{
+    @apply flex flex-col gap-4 items-center justify-center w-fit m-auto
+}
 
+.frame-div-wrapper{
+    @apply flex flex-col md:flex-row gap-2 mx-3 md:gap-7 
+}
+
+.check-outer-div{
+    @apply relative bg-violet-500 w-16 h-16  my-7
+}
 
 .check-inner-div{
     @apply  absolute bottom-5 left-5
