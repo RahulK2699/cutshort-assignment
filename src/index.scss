@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html,body {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 // css for pages
 
@@ -21,5 +23,76 @@
 .check-inner-div{
     @apply  absolute bottom-5 left-5
 }
-
 //css for components
+
+//Button
+.btn{
+    @apply w-1/2   text-center p-3 rounded-md bg-violet-500 text-sm text-gray-300 font-medium  mt-5
+}
+
+// Header
+.header-wrapper{
+    @apply flex gap-1 w-fit items-center my-8
+}
+
+.header-p{
+    @apply text-3xl font-semibold
+}
+
+//instruction
+.instruction-div-wrapper{
+    @apply flex flex-col gap-2 items-center mb-5
+}
+
+.instruction-heading{
+    @apply text-3xl font-semibold text-center
+}
+
+.instruction-subheading{
+    @apply text-gray-500 text-center
+}
+//Form
+
+.form-wrapper{
+    @apply  flex flex-col gap-5 px-5 md:px-0
+}
+
+.form-label{
+    @apply block mb-2 font-medium text-sm text-gray-600
+}
+
+.formlabel-span{
+    @apply text-gray-600 text-opacity-40
+}
+
+.form-input{
+    @apply outline-none border border-gray-200 p-2 rounded-md text-gray-400 
+    font-normal w-full pl-4
+}
+
+.form-error{
+    @apply text-red-500 absolute 
+}
+
+//stepper
+
+.stepper-p{
+    @apply w-8  bg-gray-400
+}
+
+.stepper-div{
+    @apply w-9 h-9  border border-gray-400 text-xs relative
+}
+.stepper-bg-violet{
+    @apply  border-none bg-bgviolet text-white
+}
+
+//Frame
+
+.frame-div-wrapper{
+    @apply w-full border border-gray-300 rounded-md p-4 pr-5 flex flex-col gap-2 cursor-pointer
+}
+
+.frame-text{
+    @apply font-semibold mt-2
+}

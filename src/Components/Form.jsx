@@ -13,7 +13,7 @@ const Form = ({
   error2,
 }) => {
   return (
-    <form className=" form-wrapper">
+    <form className=" form-wrapper w-[380px]">
       <div className="relative">
         <label className=" form-label">{label1}</label>
         <input
@@ -23,7 +23,7 @@ const Form = ({
           value={value1}
           onChange={onChange}
         />
-        <p className=" form-error ">{error1}</p>
+        <p className=" form-error text-[10px]">{error1}</p>
       </div>
 
       <div>
@@ -37,7 +37,7 @@ const Form = ({
           onChange={onChange}
           name={name2}
         />
-        <p className="  form-error ">{error2}</p>
+        <p className="  form-error text-[10px]">{error2}</p>
       </div>
     </form>
   );
