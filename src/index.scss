@@ -23,6 +23,10 @@ html,body {
 .check-inner-div{
     @apply  absolute bottom-5 left-5
 }
+
+.change-bg{
+    @apply border border-bgviolet
+}
 //css for components
 
 //Button
@@ -89,8 +93,8 @@ html,body {
 
 //Frame
 
-.frame-div-wrapper{
-    @apply w-full border border-gray-300 rounded-md p-4 pr-5 flex flex-col gap-2 cursor-pointer
+.frame-comp-wrapper{
+    @apply w-full border rounded-md p-4 pr-5 flex flex-col gap-2 cursor-pointer
 }
 
 .frame-text{
