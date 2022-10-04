@@ -13,10 +13,10 @@ const Stepper = ({ count }) => {
           ></p>
           <div
             className={` stepper-div  ${
-              index + 1 <= count ? " border-none bg-[#684ce4] text-white" : ""
+              index + 1 <= count ? "stepper-bg-violet" : ""
             }`}
           >
-            <p className="absolute left-[14px] top-2"> {e}</p>
+            <p className="absolute left-[14px] top-[9px]"> {e}</p>
           </div>
           <p
             className={`stepper-p  ${

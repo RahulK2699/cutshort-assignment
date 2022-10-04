@@ -28,8 +28,7 @@ const Form = ({
 
       <div>
         <label className=" form-label">
-          {label2}{" "}
-          <span className=" text-gray-600 text-opacity-40">{optional}</span>
+          {label2} <span className=" form-label-span">{optional}</span>
         </label>
         <input
           className="form-input"

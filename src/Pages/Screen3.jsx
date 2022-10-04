@@ -1,6 +1,4 @@
 import React from "react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Button from "../Components/Button";
 import Header from "../Components/Header";
 import Instruction from "../Components/Instruction";
@@ -8,6 +6,10 @@ import Frame from "../Components/Screen3/Frame";
 import PersonIcon from "@mui/icons-material/Person";
 import GroupsIcon from "@mui/icons-material/Groups";
 import Stepper from "../Components/Stepper";
+
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 const Screen3 = () => {
   const [selected, setSelected] = useState({ frame1: false, frame2: false });
 

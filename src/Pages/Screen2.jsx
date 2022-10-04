@@ -3,16 +3,18 @@ import Form from "../Components/Form";
 import Button from "../Components/Button";
 import Header from "../Components/Header";
 import Instruction from "../Components/Instruction";
+import Stepper from "../Components/Stepper";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { validate } from "../common/validate";
-import Stepper from "../Components/Stepper";
+import { field } from "../common/field";
 
 const Screen2 = () => {
   const [params, setParams] = useState({ workspaceName: "", workspaceURL: "" });
   const [formErrors, setFormErrors] = useState({});
   const navigate = useNavigate();
+  const rules = field.screen2;
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -21,10 +23,7 @@ const Screen2 = () => {
   };
 
   const handleClick = () => {
-    const myFunc = validate(params, {
-      workspaceName: "required|max:15|min:3",
-      workspaceURL: "url",
-    });
+    const myFunc = validate(params, rules);
     let isValid = Object.keys(myFunc).length;
 
     if (isValid > 0) setFormErrors({ ...myFunc });

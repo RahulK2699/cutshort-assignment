@@ -3,14 +3,16 @@ import Form from "../Components/Form";
 import Button from "../Components/Button";
 import Header from "../Components/Header";
 import Instruction from "../Components/Instruction";
+import Stepper from "../Components/Stepper";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { validate } from "../common/validate";
-import Stepper from "../Components/Stepper";
+import { field } from "../common/field";
 
 const Screen1 = () => {
   const input_data = { firstname: "", displayname: "" };
+  const rules = field.screen1;
   const [params, setParams] = useState(input_data);
   const [formErrors, setFormErrors] = useState({});
   const navigate = useNavigate();
@@ -22,10 +24,7 @@ const Screen1 = () => {
   };
 
   const handleClick = () => {
-    const myFunc = validate(params, {
-      displayname: "required|max:15|min:3",
-      firstname: "required|min:3|max:15|string",
-    });
+    const myFunc = validate(params, rules);
     let isValid = Object.keys(myFunc).length;
 
     if (isValid > 0) setFormErrors({ ...myFunc });
@@ -51,11 +50,7 @@ const Screen1 = () => {
         error2={formErrors?.displayname}
       />
 
-      <Button
-        className={" cursor-pointer"}
-        isDisabled={!params.firstname || !params.displayname}
-        onClick={() => handleClick()}
-      >
+      <Button className={" cursor-pointer"} onClick={() => handleClick()}>
         Create Workspace
       </Button>
     </div>
