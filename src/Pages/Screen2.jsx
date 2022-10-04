@@ -52,7 +52,7 @@ const Screen2 = () => {
 
       <Button
         className={" cursor-pointer"}
-        isDisabled={!params.workspaceName}
+        // isDisabled={!params.workspaceName}
         onClick={() => handleClick()}
       >
         Create Workspace
