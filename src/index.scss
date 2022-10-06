@@ -4,16 +4,17 @@
 
 html,body {
     font-family: Arial, Helvetica, sans-serif;
+    @apply px-3 md:px-0
 }
 
 // css for pages
 
 .div-wrapper{
-    @apply flex flex-col gap-4 items-center justify-center w-fit m-auto
+    @apply flex flex-col gap-4 items-center justify-center w-fit m-auto 
 }
 
 .frame-div-wrapper{
-    @apply flex flex-col md:flex-row gap-2 mx-3 md:gap-7 
+    @apply flex flex-col md:flex-row gap-2  md:gap-7 px-3 md:px-0
 }
 
 .check-outer-div{
@@ -36,7 +37,7 @@ html,body {
 
 // Header
 .header-wrapper{
-    @apply flex gap-1 w-fit items-center my-8
+    @apply flex gap-1 w-fit items-center my-8 
 }
 
 .header-p{
@@ -81,11 +82,11 @@ html,body {
 //stepper
 
 .stepper-p{
-    @apply w-8  bg-gray-400
+    @apply w-6 md:w-8  bg-gray-400
 }
 
 .stepper-div{
-    @apply w-9 h-9  border border-gray-400 text-xs relative
+    @apply w-9 h-9  border border-gray-400 text-xs relative 
 }
 .stepper-bg-violet{
     @apply  border-none bg-bgviolet text-white

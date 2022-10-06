@@ -10,10 +10,6 @@ import Stepper from "../Components/Stepper";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const styles = {
-  border: "1px solid #684ce4",
-};
-
 const Screen3 = () => {
   const [selected, setSelected] = useState(true);
 
@@ -29,12 +25,12 @@ const Screen3 = () => {
         heading={"How are you planning to use Eden ?"}
         subheading={"We'll streamline your setup experience accordingly"}
       />
-      <div className=" frame-div-wrapper w-[400px] ">
+      <div className=" frame-div-wrapper w-full md:w-[400px] ">
         <Frame
           // style={selected ? { border: styles.border } : ""}
           selected={selected}
           className={selected ? " border-bgviolet" : ""}
-          logo={<PersonIcon className={selected ? " text-violet-500" : ""} />}
+          logo={<PersonIcon className={selected ? " border-bgviolet" : ""} />}
           text={"For myself"}
           longText={"Write better, Think more clearly. Stay organized"}
           onClick={() => setSelected(true)}
@@ -43,7 +39,7 @@ const Screen3 = () => {
           // style={!selected ? { border: styles.border } : ""}
           className={!selected ? " border-bgviolet" : ""}
           selected={selected}
-          logo={<GroupsIcon className={!selected ? " text-violet-500" : ""} />}
+          logo={<GroupsIcon className={!selected ? "text-bgviolet" : ""} />}
           text={"With my team"}
           longText={" Wikis, docs, tasks & projects, all in one place"}
           onClick={() => setSelected(false)}
