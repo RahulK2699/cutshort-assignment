@@ -9,4 +9,4 @@ Recovered Points
 5. Validations for forms
 6. Custom Stepper Component
 
-deployed link : - cutshortdemo.vercel.app
+deployed link : - [Click Me](cutshortdemo.vercel.app)
